@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1465577849 source:/home/mn/workspace/dijkstra/main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<cmath>
+	<sstream>
+	<functional>
+
