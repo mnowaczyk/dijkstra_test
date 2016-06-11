@@ -38,12 +38,16 @@ double dijkstra(Graph &graph, unsigned int source, unsigned int destination)
     while(!q.empty())
     {
         current = q.top().first;
-        graph.at(current).visited = true;
-        q.pop();
         if (current == destination)
         {
             return graph.at(current).distance;
         }
+        q.pop();
+        if (graph.at(current).visited)
+        {
+            continue;
+        }
+        graph.at(current).visited = true;
         for(const edge& e : graph.at(current).neighbors)
         {
 
